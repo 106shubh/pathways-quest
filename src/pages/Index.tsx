@@ -105,14 +105,14 @@ const Index = () => {
                     <Button 
                       variant="hero" 
                       size="lg" 
-                      onClick={() => setShowTestPreview(true)}
+                      onClick={() => window.location.href = "/auth"}
                       className="group"
                     >
-                      Start Demo Assessment
+                      Start Free Assessment
                       <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <Button variant="outline" size="lg">
-                      Watch Video Demo
+                    <Button variant="outline" size="lg" onClick={() => window.location.href = "/demo"}>
+                      Watch Interactive Demo
                     </Button>
                   </div>
                 </div>
@@ -176,7 +176,7 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <Button variant="outline" className="w-full group">
+                    <Button variant="outline" className="w-full group" onClick={() => window.location.href = "/careers"}>
                       Explore Pathway
                       <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -237,7 +237,7 @@ const Index = () => {
             Join thousands of students who have found their calling with our AI-powered career guidance platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" className="group">
+            <Button variant="secondary" size="lg" className="group" onClick={() => window.location.href = "/auth"}>
               Start Free Assessment
               <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>

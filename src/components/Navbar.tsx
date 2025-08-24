@@ -75,10 +75,10 @@ export const Navbar = ({ user, userRole = 'student' }: NavbarProps) => {
               </div>
             ) : (
               <div className="flex items-center space-x-2">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" onClick={() => window.location.href = "/auth"}>
                   Login
                 </Button>
-                <Button variant="hero" size="sm">
+                <Button variant="hero" size="sm" onClick={() => window.location.href = "/auth"}>
                   Get Started
                 </Button>
               </div>
@@ -115,10 +115,10 @@ export const Navbar = ({ user, userRole = 'student' }: NavbarProps) => {
             ))}
             {!user && (
               <div className="px-3 pt-4 flex flex-col space-y-2">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" onClick={() => window.location.href = "/auth"}>
                   Login
                 </Button>
-                <Button variant="hero" size="sm">
+                <Button variant="hero" size="sm" onClick={() => window.location.href = "/auth"}>
                   Get Started
                 </Button>
               </div>
