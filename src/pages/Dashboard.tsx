@@ -19,14 +19,20 @@ import {
   Calendar,
   ArrowRight,
   CheckCircle,
-  AlertCircle
+  AlertCircle,
+  GraduationCap
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import BookCounseling from "@/components/BookCounseling";
+import UserProfile from "@/components/UserProfile";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const Dashboard = () => {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [showCounseling, setShowCounseling] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -130,9 +136,22 @@ const Dashboard = () => {
                 {studentData.class} • {studentData.stream} Stream • Ready to explore your future?
               </p>
             </div>
-            <Button variant="outline" onClick={handleSignOut}>
-              Sign Out
-            </Button>
+            <div className="flex space-x-2">
+              <Dialog open={showProfile} onOpenChange={setShowProfile}>
+                <DialogTrigger asChild>
+                  <Button variant="outline">
+                    <User className="h-4 w-4 mr-2" />
+                    Profile
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                  <UserProfile user={user} onClose={() => setShowProfile(false)} />
+                </DialogContent>
+              </Dialog>
+              <Button variant="outline" onClick={handleSignOut}>
+                Sign Out
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -367,10 +386,17 @@ const Dashboard = () => {
                   <BookOpen className="h-4 w-4 mr-2" />
                   Explore Careers
                 </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  <User className="h-4 w-4 mr-2" />
-                  Book Counseling
-                </Button>
+                <Dialog open={showCounseling} onOpenChange={setShowCounseling}>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="w-full justify-start">
+                      <User className="h-4 w-4 mr-2" />
+                      Book Counseling
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                    <BookCounseling onClose={() => setShowCounseling(false)} />
+                  </DialogContent>
+                </Dialog>
               </CardContent>
             </Card>
           </div>

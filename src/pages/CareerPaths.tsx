@@ -303,6 +303,114 @@ const CareerPaths = () => {
       scholarships: ["Bar Council Scholarships", "Legal Aid Scholarships"],
       courses: ["Constitutional Law", "Corporate Law", "Criminal Law"],
       futureScope: "Legal Tech, AI in law, International arbitration"
+    },
+    // Media & Communication
+    {
+      id: 7,
+      title: "Digital Marketing Manager",
+      category: "media",
+      icon: Camera,
+      description: "Create and execute digital marketing strategies across various platforms",
+      demand: "Very High",
+      demandColor: "secondary",
+      salaryRange: "₹5-25 LPA",
+      experience: "0-10+ years",
+      skills: ["Content Creation", "Analytics", "Social Media", "SEO/SEM"],
+      education: "Any Bachelor's + Digital Marketing Course",
+      examRequired: ["Google Ads Certification", "Facebook Blueprint"],
+      topColleges: ["MICA Ahmedabad", "Mudra Institute", "Digital Vidya"],
+      workEnvironment: "Office/Remote",
+      jobGrowth: "+28%",
+      personalityFit: "Creative, Analytical, Trend-aware",
+      dayInLife: [
+        "Plan marketing campaigns",
+        "Analyze performance metrics",
+        "Create content strategies",
+        "Coordinate with design teams",
+        "Monitor brand reputation"
+      ],
+      careerProgression: [
+        "Digital Marketing Executive (0-2 years)",
+        "Marketing Manager (2-5 years)",
+        "Senior Marketing Manager (5-8 years)",
+        "Marketing Director (8+ years)",
+        "Chief Marketing Officer (10+ years)"
+      ],
+      scholarships: ["Google Career Certificates", "Meta Marketing Scholarships"],
+      courses: ["Google Analytics", "Facebook Ads", "Content Marketing"],
+      futureScope: "AI-driven marketing, Voice search optimization, AR/VR marketing"
+    },
+    // Additional Engineering Career
+    {
+      id: 8,
+      title: "Mechanical Engineer",
+      category: "engineering",
+      icon: Code,
+      description: "Design, develop, and test mechanical devices and systems",
+      demand: "High",
+      demandColor: "warning",
+      salaryRange: "₹4-18 LPA",
+      experience: "0-15+ years",
+      skills: ["CAD Design", "Thermodynamics", "Manufacturing", "Project Management"],
+      education: "B.Tech/B.E. in Mechanical Engineering",
+      examRequired: ["JEE Main", "JEE Advanced", "State Engineering Exams"],
+      topColleges: ["IIT Delhi", "IIT Bombay", "NIT Trichy", "BITS Pilani"],
+      workEnvironment: "Manufacturing/R&D Labs",
+      jobGrowth: "+12%",
+      personalityFit: "Practical, Analytical, Detail-oriented",
+      dayInLife: [
+        "Design mechanical components",
+        "Run simulations and tests",
+        "Collaborate with production teams",
+        "Review technical specifications",
+        "Solve manufacturing problems"
+      ],
+      careerProgression: [
+        "Graduate Engineer Trainee (0-1 year)",
+        "Design Engineer (1-4 years)",
+        "Senior Engineer (4-8 years)",
+        "Project Manager (8-12 years)",
+        "Chief Technology Officer (12+ years)"
+      ],
+      scholarships: ["AICTE Scholarships", "Industry-specific grants"],
+      courses: ["AutoCAD", "SolidWorks", "Manufacturing Processes"],
+      futureScope: "Robotics, Sustainable manufacturing, 3D printing"
+    },
+    // Healthcare - Alternative Path
+    {
+      id: 9,
+      title: "Physiotherapist",
+      category: "healthcare",
+      icon: Stethoscope,
+      description: "Help patients recover from injuries and improve movement and function",
+      demand: "High",
+      demandColor: "warning",
+      salaryRange: "₹3-15 LPA",
+      experience: "0-12+ years",
+      skills: ["Anatomy Knowledge", "Patient Care", "Manual Therapy", "Exercise Prescription"],
+      education: "BPT (Bachelor of Physiotherapy) - 4.5 years",
+      examRequired: ["State BPT Entrance Exams", "NEET (some states)"],
+      topColleges: ["CMC Vellore", "AIIMS Delhi", "KMC Manipal", "Jamia Hamdard"],
+      workEnvironment: "Hospitals/Clinics/Sports Centers",
+      jobGrowth: "+21%",
+      personalityFit: "Caring, Patient, Physically active",
+      dayInLife: [
+        "Assess patient conditions",
+        "Design treatment plans",
+        "Conduct therapy sessions",
+        "Monitor patient progress",
+        "Educate patients on exercises"
+      ],
+      careerProgression: [
+        "Junior Physiotherapist (0-2 years)",
+        "Physiotherapist (2-5 years)",
+        "Senior Physiotherapist (5-8 years)",
+        "Department Head (8+ years)",
+        "Private Practice/Consultant"
+      ],
+      scholarships: ["Healthcare Professional Scholarships", "State Merit Scholarships"],
+      courses: ["Sports Physiotherapy", "Neurological Rehabilitation", "Pediatric Physiotherapy"],
+      futureScope: "Tele-rehabilitation, AI-assisted therapy, Sports medicine"
     }
   ];
 

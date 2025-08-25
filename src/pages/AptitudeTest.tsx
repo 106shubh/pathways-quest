@@ -91,9 +91,9 @@ const AptitudeTest = () => {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
-  // Sample comprehensive test questions
+  // Comprehensive test questions with 25 questions across all categories
   const testQuestions = [
-    // Logical Reasoning
+    // Logical Reasoning (6 questions)
     {
       id: 1,
       category: "Logical Reasoning",
@@ -115,9 +115,42 @@ const AptitudeTest = () => {
       options: ["40", "42", "44", "48"],
       correct: 1
     },
-    // Quantitative Aptitude
     {
       id: 3,
+      category: "Logical Reasoning",
+      type: "logical",
+      question: "In a certain code, COMPUTER is written as RFUVQNPC. How is MACHINE written in that code?",
+      options: ["ZNXQMPE", "ZNCHINE", "ANPQMFR", "QNXQMFR"],
+      correct: 0
+    },
+    {
+      id: 4,
+      category: "Logical Reasoning",
+      type: "logical",
+      question: "Find the odd one out:",
+      options: ["Chair", "Table", "Desk", "Room"],
+      correct: 3
+    },
+    {
+      id: 5,
+      category: "Logical Reasoning",
+      type: "logical",
+      question: "If today is Wednesday, what day will it be after 100 days?",
+      options: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      correct: 1
+    },
+    {
+      id: 6,
+      category: "Logical Reasoning",
+      type: "logical",
+      question: "Which number should come next in the series: 1, 4, 9, 16, 25, ?",
+      options: ["30", "35", "36", "49"],
+      correct: 2
+    },
+
+    // Quantitative Aptitude (5 questions)
+    {
+      id: 7,
       category: "Quantitative Aptitude",
       type: "quantitative",
       question: "A train travels 120 km in 2 hours. At this rate, how far will it travel in 5 hours?",
@@ -125,16 +158,41 @@ const AptitudeTest = () => {
       correct: 2
     },
     {
-      id: 4,
+      id: 8,
       category: "Quantitative Aptitude",
       type: "quantitative",
       question: "If 3x + 7 = 22, what is the value of x?",
       options: ["3", "4", "5", "6"],
       correct: 2
     },
-    // Verbal Reasoning
     {
-      id: 5,
+      id: 9,
+      category: "Quantitative Aptitude",
+      type: "quantitative",
+      question: "What is 15% of 200?",
+      options: ["25", "30", "35", "40"],
+      correct: 1
+    },
+    {
+      id: 10,
+      category: "Quantitative Aptitude",
+      type: "quantitative",
+      question: "If the cost of 5 books is ₹125, what is the cost of 8 books?",
+      options: ["₹180", "₹200", "₹220", "₹240"],
+      correct: 1
+    },
+    {
+      id: 11,
+      category: "Quantitative Aptitude",
+      type: "quantitative",
+      question: "The average of 5 numbers is 20. If one number is 25, what is the sum of the other 4 numbers?",
+      options: ["75", "80", "85", "95"],
+      correct: 0
+    },
+
+    // Verbal Reasoning (4 questions)
+    {
+      id: 12,
       category: "Verbal Reasoning",
       type: "verbal",
       question: "Choose the word that best completes the analogy: Book : Author :: Painting : ?",
@@ -142,16 +200,33 @@ const AptitudeTest = () => {
       correct: 1
     },
     {
-      id: 6,
+      id: 13,
       category: "Verbal Reasoning", 
       type: "verbal",
       question: "Which word does NOT belong with the others?",
       options: ["Honest", "Truthful", "Sincere", "Wealthy"],
       correct: 3
     },
-    // Spatial Intelligence
     {
-      id: 7,
+      id: 14,
+      category: "Verbal Reasoning",
+      type: "verbal",
+      question: "Complete the sentence: Despite the heavy rain, the match continued _______.",
+      options: ["nevertheless", "however", "therefore", "moreover"],
+      correct: 0
+    },
+    {
+      id: 15,
+      category: "Verbal Reasoning",
+      type: "verbal",
+      question: "What is the antonym of 'abundant'?",
+      options: ["Plentiful", "Scarce", "Ample", "Sufficient"],
+      correct: 1
+    },
+
+    // Spatial Intelligence (4 questions)
+    {
+      id: 16,
       category: "Spatial Intelligence",
       type: "spatial",
       question: "How many cubes are there in a 3×3×3 cube structure?",
@@ -159,16 +234,33 @@ const AptitudeTest = () => {
       correct: 3
     },
     {
-      id: 8,
+      id: 17,
       category: "Spatial Intelligence",
       type: "spatial",
       question: "If you fold a paper in half twice and then cut a triangle, how many triangles will you see when unfolded?",
       options: ["2", "4", "6", "8"],
       correct: 1
     },
-    // Interest & Personality
     {
-      id: 9,
+      id: 18,
+      category: "Spatial Intelligence",
+      type: "spatial",
+      question: "Which shape would be formed if you unfolded this cube net? (Imagine a cross shape)",
+      options: ["Cylinder", "Cube", "Pyramid", "Sphere"],
+      correct: 1
+    },
+    {
+      id: 19,
+      category: "Spatial Intelligence",
+      type: "spatial",
+      question: "How many faces does a hexagonal prism have?",
+      options: ["6", "8", "10", "12"],
+      correct: 1
+    },
+
+    // Interest Assessment (3 questions)
+    {
+      id: 20,
       category: "Interest Assessment",
       type: "interest",
       question: "Which activity would you most enjoy?",
@@ -178,10 +270,10 @@ const AptitudeTest = () => {
         "Building or fixing mechanical devices",
         "Helping people solve their problems"
       ],
-      correct: -1 // No correct answer for interest questions
+      correct: -1
     },
     {
-      id: 10,
+      id: 21,
       category: "Interest Assessment",
       type: "interest",
       question: "In your free time, you prefer to:",
@@ -193,17 +285,23 @@ const AptitudeTest = () => {
       ],
       correct: -1
     },
-    // More questions for comprehensive assessment
     {
-      id: 11,
-      category: "Logical Reasoning",
-      type: "logical",
-      question: "In a certain code, COMPUTER is written as RFUVQNPC. How is MACHINE written in that code?",
-      options: ["ZNXQMPE", "ZNCHINE", "ANPQMFR", "QNXQMFR"],
-      correct: 0
+      id: 22,
+      category: "Interest Assessment",
+      type: "interest",
+      question: "Which work environment appeals to you most?",
+      options: [
+        "Laboratory or research facility",
+        "Creative studio or workshop",
+        "Outdoor or field work",
+        "Office with team collaboration"
+      ],
+      correct: -1
     },
+
+    // Personality (3 questions)
     {
-      id: 12,
+      id: 23,
       category: "Personality",
       type: "personality",
       question: "When working on a group project, you typically:",
@@ -212,6 +310,32 @@ const AptitudeTest = () => {
         "Focus on your individual contribution",
         "Make sure everyone gets along well",
         "Research and provide detailed analysis"
+      ],
+      correct: -1
+    },
+    {
+      id: 24,
+      category: "Personality",
+      type: "personality",
+      question: "When facing a difficult problem, you:",
+      options: [
+        "Break it down into smaller parts",
+        "Brainstorm creative solutions",
+        "Seek advice from others",
+        "Research best practices and methods"
+      ],
+      correct: -1
+    },
+    {
+      id: 25,
+      category: "Personality",
+      type: "personality",
+      question: "In a stressful situation, you tend to:",
+      options: [
+        "Stay calm and think logically",
+        "Express your feelings openly",
+        "Focus on supporting others",
+        "Analyze the situation thoroughly"
       ],
       correct: -1
     }
@@ -295,10 +419,10 @@ const AptitudeTest = () => {
     });
 
     return {
-      logical: (logicalScore / 3) * 100,
-      quantitative: (quantitativeScore / 2) * 100,
-      verbal: (verbalScore / 2) * 100,
-      spatial: (spatialScore / 2) * 100,
+      logical: (logicalScore / 6) * 100,
+      quantitative: (quantitativeScore / 5) * 100,
+      verbal: (verbalScore / 4) * 100,
+      spatial: (spatialScore / 4) * 100,
       interests
     };
   };
@@ -591,6 +715,7 @@ const AptitudeTest = () => {
           </motion.div>
         )}
 
+
         {testSection === 'results' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -599,61 +724,192 @@ const AptitudeTest = () => {
           >
             {/* Results Header */}
             <div className="text-center space-y-4">
-              <div className="flex items-center justify-center space-x-2">
-                <div className="p-3 bg-gradient-secondary rounded-lg">
-                  <CheckCircle className="h-8 w-8 text-white" />
-                </div>
-                <h1 className="text-3xl font-bold">Assessment Complete!</h1>
-              </div>
+              <div className="text-6xl mb-4">🎉</div>
+              <h2 className="text-3xl font-bold">Assessment Complete!</h2>
               <p className="text-xl text-muted-foreground">
-                Here are your personalized career recommendations
+                Here are your personalized career recommendations based on your responses
               </p>
             </div>
 
-            {/* Results Cards */}
-            <div className="grid gap-6">
-              {getCareerRecommendations().map((recommendation, index) => (
-                <Card key={index} className="border-0 shadow-elegant">
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <CardTitle className="flex items-center space-x-2">
-                        <div className="flex items-center justify-center w-8 h-8 bg-primary-muted text-primary rounded-full text-sm font-bold">
-                          {index + 1}
-                        </div>
-                        <span>{recommendation.title}</span>
-                      </CardTitle>
-                      <Badge variant="secondary" className="text-lg px-3 py-1">
-                        {recommendation.match}% Match
-                      </Badge>
+            {/* Overall Score */}
+            <Card className="border-0 shadow-elegant">
+              <CardContent className="p-8">
+                <div className="text-center space-y-4">
+                  <div className="text-5xl font-bold text-primary">
+                    {Math.round((calculateResults().logical + calculateResults().quantitative + calculateResults().verbal + calculateResults().spatial) / 4)}%
+                  </div>
+                  <div className="text-lg text-muted-foreground">Overall Assessment Score</div>
+                  <div className="flex justify-center space-x-6 mt-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-primary">{Math.round(calculateResults().logical)}%</div>
+                      <div className="text-sm text-muted-foreground">Logical</div>
                     </div>
-                    <CardDescription>{recommendation.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="font-medium mb-2">Recommended Career Paths:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {recommendation.paths.map((path, pathIndex) => (
-                            <Badge key={pathIndex} variant="outline">
-                              {path}
-                            </Badge>
-                          ))}
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-secondary">{Math.round(calculateResults().quantitative)}%</div>
+                      <div className="text-sm text-muted-foreground">Quantitative</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-accent">{Math.round(calculateResults().verbal)}%</div>
+                      <div className="text-sm text-muted-foreground">Verbal</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-warning">{Math.round(calculateResults().spatial)}%</div>
+                      <div className="text-sm text-muted-foreground">Spatial</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Career Recommendations */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-center">Your Top Career Matches</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {getCareerRecommendations().map((career, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Card className="h-full hover:shadow-lg transition-all duration-300">
+                      <CardHeader>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
+                              {index + 1}
+                            </div>
+                            <CardTitle className="text-lg">{career.title}</CardTitle>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-2xl font-bold text-secondary">{career.match}%</div>
+                            <div className="text-xs text-muted-foreground">Match</div>
+                          </div>
                         </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground mb-4">{career.description}</p>
+                        
+                        <div className="space-y-2">
+                          <h5 className="font-medium text-sm">Related Career Paths:</h5>
+                          <div className="flex flex-wrap gap-1">
+                            {career.paths.map((path, pathIndex) => (
+                              <Badge key={pathIndex} variant="secondary" className="text-xs">
+                                {path}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Interest Profile */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Your Interest Profile</CardTitle>
+                <CardDescription>
+                  Based on your responses, here's how your interests align with different career areas
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {Object.entries(calculateResults().interests).map(([interest, score]) => (
+                    <div key={interest} className="text-center">
+                      <div className="text-2xl font-bold text-primary">{score}</div>
+                      <div className="text-sm text-muted-foreground capitalize">{interest}</div>
+                      <div className="w-full bg-muted rounded-full h-2 mt-2">
+                        <div 
+                          className="bg-gradient-primary h-2 rounded-full transition-all duration-500"
+                          style={{ width: `${(score / Math.max(...Object.values(calculateResults().interests))) * 100}%` }}
+                        ></div>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Next Steps */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Recommended Next Steps</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary" />
+                      <span className="text-sm">Explore detailed career pathways</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary" />
+                      <span className="text-sm">Research top colleges and entrance exams</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary" />
+                      <span className="text-sm">Identify skill development opportunities</span>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary" />
+                      <span className="text-sm">Connect with industry professionals</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary" />
+                      <span className="text-sm">Book a counseling session</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary" />
+                      <span className="text-sm">Create your action plan</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={() => navigate("/careers")} variant="hero" size="lg">
-                Explore Career Pathways
-                <ArrowRight className="h-5 w-5 ml-2" />
+                Explore Career Paths <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
               <Button onClick={() => navigate("/dashboard")} variant="outline" size="lg">
-                Back to Dashboard
+                View Dashboard
+              </Button>
+              <Button 
+                onClick={() => {
+                  const results = calculateResults();
+                  const reportData = {
+                    overall: Math.round((results.logical + results.quantitative + results.verbal + results.spatial) / 4),
+                    categories: results,
+                    recommendations: getCareerRecommendations(),
+                    date: new Date().toLocaleDateString()
+                  };
+                  
+                  const dataStr = JSON.stringify(reportData, null, 2);
+                  const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+                  
+                  const exportFileDefaultName = `career-assessment-report-${new Date().toISOString().split('T')[0]}.json`;
+                  
+                  const linkElement = document.createElement('a');
+                  linkElement.setAttribute('href', dataUri);
+                  linkElement.setAttribute('download', exportFileDefaultName);
+                  linkElement.click();
+                  
+                  toast({
+                    title: "Report Downloaded",
+                    description: "Your assessment report has been downloaded successfully.",
+                  });
+                }}
+                variant="outline" 
+                size="lg"
+              >
+                Download Report
               </Button>
             </div>
           </motion.div>
